@@ -1,0 +1,131 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Public Data API
+  description: 공공데이터 API 조회
+servers:
+  - url: http://localhost:3000/
+paths:
+  /shortTerm/http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst?dataType=JSON&serviceKey=${process.env.PUBLIC_KEY}&numOfRows=${numOfRows}&pageNo=${pageNo}&base_date=${base_date}&base_time=${base_time}&nx=${nx}&ny=${ny}:
+    get:
+      tags:
+        - wether
+      summary: '초단기실황조회'
+      description: '요청 경로에 값을 담아 서버에 보낸다.'
+      parameters:
+        - in: query
+          name: serviceKey
+          required: true
+          description: serviceKey
+          schema:
+            type: string
+        - in: query
+          name: numOfRows
+          required: true
+          description: 페이지 당 row 수
+          schema:
+            type: string
+        - in: query
+          name: pageNo
+          required: true
+          description: 페이지 번호
+          schema:
+            type: number
+        - in: query
+          name: base_date
+          required: true
+          description: 발표일자 (yyyymmdd)
+          schema:
+            type: string
+        - in: query
+          name: base_time
+          required: true
+          description: 발표시각 (hhmm)
+          schema:
+            type: string
+        - in: query
+          name: nx
+          required: true
+          description: 위도
+          schema:
+            type: number
+        - in: query
+          name: ny
+          required: true
+          description: 경도
+          schema:
+            type: number
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+              type: array
+              example:
+                [
+                  {
+                    'baseDate': '20221020',
+                    'baseTime': '0600',
+                    'category': 'PTY',
+                    'nx': 55,
+                    'ny': 127,
+                    'obsrValue': '0',
+                  },
+                  {
+                    'baseDate': '20221020',
+                    'baseTime': '0600',
+                    'category': 'REH',
+                    'nx': 55,
+                    'ny': 127,
+                    'obsrValue': '94',
+                  },
+                  {
+                    'baseDate': '20221020',
+                    'baseTime': '0600',
+                    'category': 'RN1',
+                    'nx': 55,
+                    'ny': 127,
+                    'obsrValue': '0',
+                  },
+                  {
+                    'baseDate': '20221020',
+                    'baseTime': '0600',
+                    'category': 'T1H',
+                    'nx': 55,
+                    'ny': 127,
+                    'obsrValue': '3.7',
+                  },
+                  {
+                    'baseDate': '20221020',
+                    'baseTime': '0600',
+                    'category': 'UUU',
+                    'nx': 55,
+                    'ny': 127,
+                    'obsrValue': '0',
+                  },
+                  {
+                    'baseDate': '20221020',
+                    'baseTime': '0600',
+                    'category': 'VEC',
+                    'nx': 55,
+                    'ny': 127,
+                    'obsrValue': '0',
+                  },
+                  {
+                    'baseDate': '20221020',
+                    'baseTime': '0600',
+                    'category': 'VVV',
+                    'nx': 55,
+                    'ny': 127,
+                    'obsrValue': '0',
+                  },
+                  {
+                    'baseDate': '20221020',
+                    'baseTime': '0600',
+                    'category': 'WSD',
+                    'nx': 55,
+                    'ny': 127,
+                    'obsrValue': '0',
+                  },
+                ]

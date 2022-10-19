@@ -1,0 +1,8 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Public Data API
+  description: 공공데이터 API 조회
+servers:
+  - url: 'http://localhost:3000/'
+paths: {}

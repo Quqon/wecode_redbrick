@@ -8,7 +8,11 @@
   },
   "scripts": {
     "test": "DOTENV_CONFIG_PATH=.env jest --setupFiles=dotenv/config",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "build": "tsc && node dist",
+    "api-docs": "swagger-cli bundle ./src/swagger/index.yaml --outfile build/index.yaml --type yaml",
+    "predev": "npm run api-docs",
+    "dev": "nodemon"
   },
   "keywords": [],
   "author": "",
@@ -18,9 +22,15 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "morgan": "^1.10.0",
-    "node-fetch": "^2.6.7"
+    "node-fetch": "^2.6.7",
+    "swagger-cli": "^4.0.4",
+    "yamljs": "^0.3.0"
   },
   "devDependencies": {
-    "@types/node-fetch": "^2.6.2"
+    "@types/node-fetch": "^2.6.2",
+    "@types/swagger-ui-express": "^4.1.3",
+    "@types/yamljs": "^0.2.31",
+    "swagger-jsdoc": "^6.2.5",
+    "swagger-ui-express": "^4.5.0"
   }
 }
