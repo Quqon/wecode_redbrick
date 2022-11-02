@@ -3,6 +3,8 @@ const metroService = require("./metroService");
 const busService = require("./busService");
 const wetherServices = require("./wetherServices");
 const dustService = require("./dustService");
+const userService = require("./userService");
+
 
 module.exports = {
   newsService,
@@ -10,4 +12,5 @@ module.exports = {
   busService,
   wetherServices,
   dustService,
+  userService
 };

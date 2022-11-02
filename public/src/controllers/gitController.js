@@ -9,7 +9,7 @@ const getPr = async (req, res) => {
     owner: "wecode-bootcamp-korea",
     repo: "38-1st-Wedidas-frontend",
   });
-  console.log(response.data.length)
+
   return res.status(200).json(response);
 };
 
