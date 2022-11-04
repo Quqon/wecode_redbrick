@@ -4,6 +4,7 @@ const busController = require("./busController");
 const wetherControllers = require("./wetherControllers");
 const dustController = require("./dustController");
 const gitController = require("./gitController");
+const userController = require("./userController");
 
 module.exports = {
   newsController,
@@ -11,5 +12,6 @@ module.exports = {
   busController,
   wetherControllers,
   dustController,
-  gitController
+  gitController,
+  userController
 };
