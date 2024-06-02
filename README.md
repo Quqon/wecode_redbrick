@@ -12,4 +12,4 @@ PM으로써 매일 아침 회의 진행과 프로젝트 진행 속도를 체크,
 공공 api를 이용해 연도별 미세먼지 발생량 제공 해주는 코드를 layered pattern을 적용해 구현. 
 swagger spec 작성.
 ubuntu를 설치 해 JMETER를 이용한 부하 테스트.
-E2E 테스트 적용.
+Jest와 SuperTest를 이용한 E2E 테스트.
