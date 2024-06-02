@@ -1,8 +1,8 @@
 const express = require('express');
-const { wetherControllers } = require('../controllers');
+const { weatherControllers } = require('../controllers');
 const router = express.Router();
 
-router.get("/shortTerm", wetherControllers.shortTerm);
-router.get("/airForecast", wetherControllers.airForecast);
+router.get("/shortTerm", weatherControllers.shortTerm);
+router.get("/airForecast", weatherControllers.airForecast);
 
 module.exports = router;
